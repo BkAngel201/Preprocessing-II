@@ -12,3 +12,22 @@
 @shark: #212529;
 @eastern-blue: #17A2B8;
 @sandy-beach: #FFEBCD;
+
+// Media Queries
+@max800: ~"only screen and (max-width: 800px)";
+@max500: ~"only screen and (max-width: 500px)";
+
+
+// Animations
+
+@keyframes buttonAnimation {
+    25% {
+        background-color: @shark;
+        color: @white;
+    }
+    100% {
+        background: transparent;
+        border: 1px solid @shark;
+        color: @shark;
+    }
+}

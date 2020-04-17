@@ -1,3 +1,14 @@
+@keyframes buttonAnimation {
+  25% {
+    background-color: #212529;
+    color: #FFFFFF;
+  }
+  100% {
+    background: transparent;
+    border: 1px solid #212529;
+    color: #212529;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -168,38 +179,71 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-header nav {
-  display: flex;
-  flex-direction: column;
+nav {
   padding: 20px 0;
   border-bottom: 2px dashed #C0C0C0;
 }
-header nav .container.nav {
+nav .container.nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: stretch;
   border-bottom: none;
 }
-header nav .container.nav ul {
+@media only screen and (max-width: 800px) {
+  nav .container.nav h1 {
+    text-align: center;
+  }
+}
+nav .container.nav ul {
   display: flex;
   font-size: 2rem;
 }
-header nav .container.nav ul li {
+nav .container.nav ul li {
   display: flex;
   margin-left: 5px;
 }
-header nav .container.nav ul li a {
+nav .container.nav ul li a {
   display: flex;
   padding: 0 20px;
   align-items: center;
-  background-color: red;
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: #212529;
 }
-header .container {
-  border-bottom: 2px dashed #C0C0C0;
+nav .container.nav ul li a:hover {
+  animation-name: buttonAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
-header .container img {
-  margin-bottom: 30px;
+@media only screen and (max-width: 800px) {
+  nav .container.nav ul li a {
+    padding: 10px 30px;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  nav .container.nav ul li a {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+  }
+}
+nav .container.nav ul li:first-child {
+  margin-left: 0;
+}
+@media only screen and (max-width: 800px) {
+  nav .container.nav ul li {
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 800px) {
+  nav .container.nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 .footer {
   width: 100%;
@@ -212,6 +256,17 @@ header .container img {
   font-size: 1.6rem;
   padding: 20px;
 }
+header .container {
+  border-bottom: 2px dashed #C0C0C0;
+}
+header .container img {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 800px) {
+  header .container {
+    padding: 0 20px;
+  }
+}
 .home .content-section {
   margin: 30px 0;
   display: flex;
@@ -222,12 +277,32 @@ header .container img {
   width: 48%;
   padding-right: 1%;
 }
+@media only screen and (max-width: 800px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
 }
 .home .content-section .img-content img {
   border-radius: 10px;
+}
+@media only screen and (max-width: 800px) {
+  .home .content-section .img-content img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home .content-section {
+    flex-direction: column;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
@@ -236,6 +311,11 @@ header .container img {
 .home .inverse-content .text-content {
   padding-left: 1%;
   padding-right: 0;
+}
+@media only screen and (max-width: 800px) {
+  .home .inverse-content .text-content {
+    order: -1;
+  }
 }
 .home .inverse-content .img-content {
   padding-right: 1%;
@@ -247,6 +327,16 @@ header .container img {
 }
 .home .content-destination img {
   border-radius: 10px;
+}
+@media only screen and (max-width: 800px) {
+  .home .content-destination img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home .content-destination {
+    width: 100%;
+  }
 }
 .home .content-pick {
   padding-top: 30px;
@@ -265,4 +355,20 @@ header .container img {
   border-radius: 20px;
   font-size: 1.6rem;
   padding: 10px 0;
+}
+@media only screen and (max-width: 800px) {
+  .home .content-pick .destination {
+    align-self: center;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home .content-pick {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home {
+    padding: 0 20px;
+  }
 }

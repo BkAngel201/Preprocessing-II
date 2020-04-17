@@ -1,37 +1,58 @@
-// Navigation Styles here
-header {
-    
-    nav {
-        .flex-column();
-        padding: 20px 0;
-        border-bottom: 2px dashed @silver;
-        .container.nav {
-            .flex();
-            width: 100%;
-            justify-content: space-between;
-            align-items: stretch;
-            border-bottom: none;
-            ul {
-                .flex();
-                font-size: 2rem;
-                li {
-                    .flex();
-                    margin-left: 5px;
-                    a {
-                        .flex();
-                        padding: 0 20px;
-                        align-items: center;
-                        background-color: red;
-                    }
-                }
+// Navigation Styles here 
+nav {
+    padding: 20px 0;
+    border-bottom: 2px dashed @silver;
+    .container.nav {
+        .flex();
+        width: 100%;
+        justify-content: space-between;
+        align-items: stretch;
+        border-bottom: none;
+        h1 {
+            @media @max800 {
+                text-align: center;
             }
         }
-        
-    }
-    .container {
-        border-bottom: 2px dashed @silver;
-        img {
-            margin-bottom: 30px;
+        ul {
+            .flex();
+            font-size: 2rem;
+            li {
+                .flex();
+                margin-left: 5px;
+                a {
+                    .flex();
+                    padding: 0 20px;
+                    align-items: center;
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                    text-decoration: none;
+                    color: @shark;
+                    &:hover {
+                        .animation(buttonAnimation, 1s);
+                    }
+                    @media @max800 {
+                        padding: 10px 30px;
+                        font-size: 1.8rem;
+                    }
+                    @media @max500 {
+                        padding: 10px 20px;
+                        font-size: 1.5rem;
+                    }
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                @media @max800 {
+                    flex-grow: 1;
+                    justify-content: space-around;
+                }
+            }
+            
+        }
+        @media @max800 {
+            .flex-column();
+            padding: 0;
         }
     }
+    
 }

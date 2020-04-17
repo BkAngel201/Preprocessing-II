@@ -355,6 +355,11 @@ header .container img {
   border-radius: 20px;
   font-size: 1.6rem;
   padding: 10px 0;
+  cursor: pointer;
+}
+.home .content-pick .destination .btn:hover {
+  background-color: #191970;
+  color: #FFFFFF;
 }
 @media only screen and (max-width: 800px) {
   .home .content-pick .destination {
@@ -366,6 +371,32 @@ header .container img {
   .home .content-pick {
     flex-direction: column;
   }
+}
+.home .content-package {
+  padding-top: 30px;
+  border-top: 2px dashed #C0C0C0;
+}
+.home .content-package form input,
+.home .content-package form select,
+.home .content-package form textarea {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.home .content-package form .btn {
+  width: 100%;
+  background-color: #228B22;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.home .content-package form .btn:hover {
+  background-color: #2E8B57;
+  color: #FFFFFF;
 }
 @media only screen and (max-width: 800px) {
   .home {

@@ -91,6 +91,9 @@ header {
       margin-bottom: 30px;
       .btn {
         .rounded-buttons(20px, @eastern-blue, @white, 1.6rem);
+        &:hover {
+          .rounded-buttons-hover(@midnight-blue, @white);
+        }
       }
       @media @max800 {
         align-self: center;
@@ -99,6 +102,26 @@ header {
     }
     @media @max800 {
       flex-direction: column;
+    }
+  }
+
+  .content-package {
+    padding-top: 30px;
+    border-top: 2px dashed @navigation-border;
+    form {
+      input, select, textarea {
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+      }
+      .btn {
+        width: 100%;
+        .rounded-buttons(20px, @forest-green, @white, 1.6rem);
+        margin-bottom: 30px;
+        &:hover {
+          .rounded-buttons-hover(@sea-green, @white);
+        }
+      }
     }
   }
   @media @max800 {

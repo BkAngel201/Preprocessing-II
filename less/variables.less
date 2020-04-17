@@ -11,4 +11,26 @@
 @silver: #C0C0C0;
 @shark: #212529;
 @eastern-blue: #17A2B8;
+@midnight-blue: #191970;
 @sandy-beach: #FFEBCD;
+@forest-green: #228B22;
+@sea-green: #2E8B57;
+
+// Media Queries
+@max800: ~"only screen and (max-width: 800px)";
+@max500: ~"only screen and (max-width: 500px)";
+
+
+// Animations
+
+@keyframes buttonAnimation {
+    25% {
+        background-color: @shark;
+        color: @white;
+    }
+    100% {
+        background: transparent;
+        border: 1px solid @shark;
+        color: @shark;
+    }
+}

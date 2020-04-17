@@ -1,3 +1,15 @@
+header {
+  .container {
+    border-bottom: 2px dashed @silver;
+    img {
+      margin-bottom: 30px;
+    }
+    @media @max800 {
+      padding: 0 20px;
+    }
+  }
+}
+
 .home {
 
   .content-section {
@@ -11,6 +23,9 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @max800 {
+        width: 100%;
+      }
     }
 
     .img-content {
@@ -19,7 +34,16 @@
 
       img {
         border-radius: 10px;
+        @media @max800 {
+          width: 100%;
+        }
       }
+      @media @max800 {
+        width: 100%;
+      }
+    }
+    @media @max800 {
+      flex-direction: column;
     }
   }
 
@@ -30,6 +54,9 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @max800 {
+        order: -1;
+      }
     }
 
     .img-content {
@@ -44,6 +71,12 @@
 
     img {
       border-radius: 10px;
+      @media @max800 {
+        width: 100%;
+      }
+    }
+    @media @max800 {
+      width: 100%;
     }
   }
 
@@ -56,6 +89,42 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn {
+        .rounded-buttons(20px, @eastern-blue, @white, 1.6rem);
+        &:hover {
+          .rounded-buttons-hover(@midnight-blue, @white);
+        }
+      }
+      @media @max800 {
+        align-self: center;
+        width: 70%;
+      }
     }
+    @media @max800 {
+      flex-direction: column;
+    }
+  }
+
+  .content-package {
+    padding-top: 30px;
+    border-top: 2px dashed @navigation-border;
+    form {
+      input, select, textarea {
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+      }
+      .btn {
+        width: 100%;
+        .rounded-buttons(20px, @forest-green, @white, 1.6rem);
+        margin-bottom: 30px;
+        &:hover {
+          .rounded-buttons-hover(@sea-green, @white);
+        }
+      }
+    }
+  }
+  @media @max800 {
+    padding: 0 20px; 
   }
 }// home
